@@ -1,0 +1,52 @@
+---
+title: 'Google Analytics 4 - Migrate to the new version'
+date: 2023-02-14T15:32:14Z
+lastmod: '2023-02-14'
+tags: ['guide', 'TIL']
+draft: false
+summary: 'A dirty quick guide on installing and migrating websites to the the new version of Google Analytics'
+layout: PostSimple
+bibliography:
+canonicalUrl: https://tailwind-nextjs-starter-blog.vercel.app/blog/google-analytics-g4a/
+---
+
+## The new era of Google Analytics
+
+Google decided to kill the switch on their Analytics Service pushing all users to migrate their setups on the new version - G4A.
+In my case I was in charge of migrating a good amount of WP installations. In this quick quide I'll brief you in parts you should know and other that you should take care.
+
+## How to install the new script.
+
+In this guide I'll follow the script route.
+
+Start by logging into the analytics platform and choose your desired Analytics account from the list.
+Under Properties and Apps column you should have one or two items.
+Choose the Item with a code starting with "UA - XXXXXXXXX".
+
+TIP: The code starting with UA Means that is the old version called Universal analytics and should be replaced.
+
+![Mountains](/static/images/google-analytics/image-1.png)
+
+Click on Manage GA4 migration and then you should be redirected on this screen
+
+![Mountains](/static/images/google-analytics/image-2.png)
+
+Click on get started button and choose Create and Continue.
+
+This way we keep the old Universal analytics property, copy the basic settings of the UA Property and create a new property with a new TAG.
+
+![Mountains](/static/images/google-analytics/image-3.png)
+
+Give this a moment and wait till the process is completed. After that head to the Data Streams Tab and copy the script from the "**View Tag Instructions**"
+
+Last, Copy this on your website. It's better to keep both the NEW and the OLD script until the new tag will gather enough data.
+
+### What Happens to my old data?
+
+Well, the documentation claims that all your data will be erased along with your old Analytics property. All the information will be available for about 6 Months and then will be removed.
+So we have to be proactive on this one.
+
+### What to look for before Migrating?
+
+Keep an eye on the Propery Access Management and Account Access Management.
+If this for example is an ecommerce website you should see a bunch of emails in the list. Make sure everything is copied in the new property. Otherwise copy them manualy or by exporting the into a CSV and then transfer them to the new property.
