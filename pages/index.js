@@ -18,14 +18,16 @@ export async function getStaticProps() {
 export default function Home({ posts }) {
   return (
     <>
-      <PageSEO title={siteMetadata.title} description={siteMetadata.description} />
+      <PageSEO title={siteMetadata.title} />
       <div className="divide-y divide-gray-200 dark:divide-gray-700">
         <div className="space-y-2 pt-6 pb-8 md:space-y-5">
-          <h1 className="text-3xl font-extrabold leading-9 tracking-tight text-gray-900 dark:text-gray-100 sm:text-4xl sm:leading-10 md:text-6xl md:leading-14">
-            Latest additons
+          <h1 className="text-2xl font-extrabold leading-9 tracking-tight text-gray-900 dark:text-gray-100 sm:text-3xl sm:leading-10 md:text-5xl md:leading-14">
+            Hello, I'm Konstantinos.
           </h1>
           <p className="text-lg leading-7 text-gray-500 dark:text-gray-400">
-            {siteMetadata.description}
+            I'm a web developer from Greece working at a local digital agency. My goal is to learn
+            something new everyday. In this website you'll find a bunch of un-polished notes on
+            explaining tools and consepts.
           </p>
         </div>
         <ul className="divide-y divide-gray-200 dark:divide-gray-700">
